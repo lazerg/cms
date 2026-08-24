@@ -76,7 +76,7 @@
                             <Subheading
                                 size="sm"
                                 class="font-semibold uppercase tracking-wide text-gray-950 text-2xs dark:text-gray-300"
-                                :text="__(group.label)"
+                                :text="group.label"
                             />
                         </td>
                     </tr>

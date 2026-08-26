@@ -74,7 +74,7 @@
             <tbody>
                 <template v-for="group in siteGroups" :key="group.key">
                     <tr v-if="hasNamedGroups">
-                        <td :colspan="columnCount" class="bg-gray-50 py-2! dark:bg-gray-800">
+                        <td :colspan="columnCount" class="sticky top-[calc(--spacing(7)+1px)] z-(--z-index-above) bg-gray-50 py-2! dark:bg-gray-800">
                             <div class="flex items-center gap-4 ps-1!">
                                 <Checkbox
                                     v-if="showOrigins"
@@ -97,6 +97,7 @@
                         <td v-if="showOrigins" class="checkbox-column ps-3!">
                             <Checkbox
                                 size="sm"
+                                class="pt-2.5"
                                 solo
                                 :model-value="isSelected(site.handle)"
                                 :label="__('Select :name', { name: __(site.name) })"
@@ -104,7 +105,7 @@
                             />
                         </td>
                         <td class="grid-cell">
-                            <div class="flex items-center gap-2">
+                            <div class="flex pt-2 items-center gap-2">
                                 <Switch v-model="site.enabled" />
                                 <Heading :text="__(site.name)" />
                             </div>
